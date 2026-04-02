@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 4 Term 1</title>
+
+<style>
+body {font-family: Arial; padding:20px; background:#f4f6fb;}
+.section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
+h2 {color:#1e3c72;}
+button {padding:10px; background:#2a5298; color:white; border:none; border-radius:10px;}
+input {padding:8px; margin:5px; width:80%;}
+</style>
+</head>
+
+<body>
+
+<h1>Grade 4 – Term 1 Learning Hub</h1>
+
+<!-- ================= MATHS ================= -->
+<div class="section">
+<h2>📘 Maths – Place Value & Addition</h2>
+
+<p><b>Definition:</b> Place value shows the value of each digit.</p>
+<p><b>Example:</b> 456 → 4 hundreds, 5 tens, 6 ones</p>
+
+<h3>🧪 Practice</h3>
+<p>1. Value of 4 in 456?</p>
+<input id="pm1">
+
+<p>2. 23 + 15 = ?</p>
+<input id="pm2">
+
+<button onclick="checkPractice()">Check Maths</button>
+<p id="practiceResult"></p>
+</div>
+
+<!-- ================= ENGLISH ================= -->
+<div class="section">
+<h2>📘 English – Comprehension</h2>
+
+<p><b>Read the passage carefully:</b></p>
+
+<p>
+Lina woke up early and helped her mother prepare breakfast. 
+She then got ready and walked to school with her friend. 
+At school, she listened carefully and completed all her work. 
+Her teacher was very proud of her effort.
+</p>
+
+<h3>🧠 Questions</h3>
+
+<p>1. What did Lina do in the morning?</p>
+<input id="e1">
+
+<p>2. Who did she go to school with?</p>
+<input id="e2">
+
+<p>3. What did she do in class?</p>
+<input id="e3">
+
+<p>4. How did the teacher feel?</p>
+<input id="e4">
+
+<p>5. What kind of learner is Lina?</p>
+<input id="e5">
+
+<p>6. What lesson can we learn?</p>
+<input id="e6">
+
+<p>7. What is one good habit she showed?</p>
+<input id="e7">
+
+<p>8. Would you do the same?</p>
+<input id="e8">
+
+<button onclick="checkEnglish()">Check Answers</button>
+<p id="engResult"></p>
+</div>
+
+<!-- ================= NST ================= -->
+<div class="section">
+<h2>📘 NST – Living & Non-Living Things</h2>
+
+<p><b>Definition:</b> Living things grow and move.</p>
+<p><b>Examples:</b> Plants, animals</p>
+
+<h3>🧪 Practice</h3>
+<p>Name one living thing:</p>
+<input id="pn1">
+</div>
+
+<!-- ================= GEO ================= -->
+<div class="section">
+<h2>📘 Geography – Places & Maps</h2>
+
+<p><b>Definition:</b> Maps help us find places.</p>
+
+<h3>🧪 Practice</h3>
+<p>What is a map?</p>
+<input id="pg1">
+</div>
+
+<!-- ================= TEST ================= -->
+<div class="section">
+<h2>🎯 End of Term Test (25 Marks)</h2>
+
+<h3>Maths</h3>
+<p>1. Value of 5 in 250</p><input id="q1">
+<p>2. 10 + 5</p><input id="q2">
+<p>3. 20 + 30</p><input id="q3">
+<p>4. 5 x 2</p><input id="q4">
+<p>5. 100 - 20</p><input id="q5">
+
+<h3>English</h3>
+<p>Lina helped her mother.</p>
+<p>6. What did she do?</p><input id="q6">
+<p>7. Where was she going?</p><input id="q7">
+<p>8. What type of learner?</p><input id="q8">
+<p>9. When did this happen?</p><input id="q9">
+<p>10. Why was she praised?</p><input id="q10">
+
+<h3>NST</h3>
+<p>11. What is a living thing?</p><input id="q11">
+<p>12. Name one plant</p><input id="q12">
+<p>13. What is non-living?</p><input id="q13">
+<p>14. Example of non-living</p><input id="q14">
+<p>15. Do animals grow?</p><input id="q15">
+
+<h3>Geography</h3>
+<p>16. What is a map?</p><input id="q16">
+<p>17. What is a place?</p><input id="q17">
+<p>18. Name one place</p><input id="q18">
+<p>19. What do maps show?</p><input id="q19">
+<p>20. Why are maps useful?</p><input id="q20">
+
+<h3>Mixed</h3>
+<p>21. 1/2 of 10</p><input id="q21">
+<p>22. What is a sentence?</p><input id="q22">
+<p>23. What is energy?</p><input id="q23">
+<p>24. Why help others?</p><input id="q24">
+<p>25. Good behaviour?</p><input id="q25">
+
+<br><br>
+<button onclick="markTest()">Submit Test</button>
+<p id="result"></p>
+</div>
+
+<!-- NAV -->
+<button onclick="location.href='index.html'">Home</button>
+<button onclick="location.href='index.html#school'">Back</button>
+<button onclick="location.href='grade4-term2.html'">Next</button>
+
+<script>
+
+function checkPractice(){
+let score=0;
+if(pm1.value=="400") score++;
+if(pm2.value=="38") score++;
+document.getElementById("practiceResult").innerText="Score: "+score+"/2";
+}
+
+function checkEnglish(){
+let score=0;
+for(let i=1;i<=8;i++){
+if(document.getElementById("e"+i).value!="") score++;
+}
+document.getElementById("engResult").innerText="Score: "+score+"/8";
+}
+
+function markTest(){
+let score=0;
+
+if(q1.value=="50") score++;
+if(q2.value=="15") score++;
+if(q3.value=="50") score++;
+if(q4.value=="10") score++;
+if(q5.value=="80") score++;
+
+for(let i=6;i<=25;i++){
+if(document.getElementById("q"+i).value!="") score++;
+}
+
+document.getElementById("result").innerText="🎉 Score: "+score+"/25";
+}
+
+</script>
+
+</body>
+</html>
