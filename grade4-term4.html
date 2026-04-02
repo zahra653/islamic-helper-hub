@@ -164,7 +164,45 @@ if(document.getElementById("e"+i).value!="") score++;
 document.getElementById("engResult").innerText="Score: "+score+"/8";
 }
 
-function markTest(){
+  function markTest(){
+
+let score = 0;
+
+if(q1.value=="5") score++;
+if(q2.value=="2") score++;
+if(q3.value=="20") score++;
+if(q4.value=="10") score++;
+if(q5.value=="15") score++;
+
+for(let i=6;i<=25;i++){
+if(document.getElementById("q"+i).value!=""){
+score++;
+}
+}
+
+// SHOW RESULT
+document.getElementById("result").innerText =
+"🎉 Score: " + score + "/25";
+
+// SAVE SCORE
+let user = localStorage.getItem("user");
+
+// create label (VERY IMPORTANT)
+let testName = "Grade 4 Term 1";
+
+// get old scores
+let existing = localStorage.getItem("scores");
+
+if(existing){
+existing = existing + "\n" + testName + ": " + score + "/25";
+} else {
+existing = testName + ": " + score + "/25";
+}
+
+// save
+localStorage.setItem("scores", existing);
+
+}
 let score=0;
 
 if(q1.value=="30") score++;
