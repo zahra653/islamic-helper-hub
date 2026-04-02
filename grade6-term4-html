@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 6 Term 3</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6fb;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📘 Grade 6 – Term 3</h1>
+
+<!-- ================= NOTES ================= -->
+
+<div class="section">
+<h2>📊 Maths – Percentages & Ratio</h2>
+
+<p>
+Percent means “out of 100”.
+Example:
+50% = 50/100 = 0.5
+</p>
+
+<p>
+Ratio compares quantities.
+Example:
+2:3 means 2 parts to 3 parts.
+</p>
+</div>
+
+<div class="section">
+<h2>📖 English – Comprehension & Writing</h2>
+
+<p>
+Learners must:
+• Understand deeper meaning  
+• Identify themes  
+• Write structured paragraphs  
+</p>
+
+<p>
+Focus:
+• Clear ideas  
+• Good vocabulary  
+• Correct grammar  
+</p>
+</div>
+
+<div class="section">
+<h2>🔬 NST – Systems in the Body</h2>
+
+<p>
+Human body systems:
+• Digestive system  
+• Circulatory system  
+• Respiratory system  
+</p>
+
+<p>
+Each system works together to keep the body alive.
+</p>
+</div>
+
+<div class="section">
+<h2>🌍 Geography – Resources & Trade</h2>
+
+<p>
+Resources:
+• Natural (water, minerals)  
+• Human (skills, labour)  
+</p>
+
+<p>
+Trade = exchange of goods between places.
+</p>
+</div>
+
+<!-- ================= COMPREHENSION ================= -->
+
+<div class="section">
+<h2>📖 Comprehension</h2>
+
+<p>
+A group of learners visited a farm to learn about resources. They saw how water was used to grow crops 
+and how workers helped harvest food. The teacher explained that both natural and human resources are important. 
+The learners realised that everything they use comes from resources and must be used wisely.
+</p>
+
+<p><b>Questions:</b></p>
+
+1. Where did the learners go?<br>
+<input id="q1"><br><br>
+
+2. What did they see on the farm?<br>
+<input id="q2"><br><br>
+
+3. What are natural resources?<br>
+<input id="q3"><br><br>
+
+4. What lesson did they learn?<br>
+<input id="q4"><br><br>
+
+</div>
+
+<!-- ================= TEST ================= -->
+
+<div class="section">
+<h2>📝 Test (25 Questions)</h2>
+
+<p>5. 50% of 20</p>
+<input id="q5"><br>
+
+<p>6. 25% of 100</p>
+<input id="q6"><br>
+
+<p>7. Ratio 2:3 meaning?</p>
+<input id="q7"><br>
+
+<p>8. 10 × 6</p>
+<input id="q8"><br>
+
+<p>9. Name one body system</p>
+<input id="q9"><br>
+
+<p>10. What is a resource?</p>
+<input id="q10"><br>
+
+<!-- EXTENDED -->
+<p>11–25: Answer fully</p>
+
+<input id="q11"><br>
+<input id="q12"><br>
+<input id="q13"><br>
+<input id="q14"><br>
+<input id="q15"><br>
+<input id="q16"><br>
+<input id="q17"><br>
+<input id="q18"><br>
+<input id="q19"><br>
+<input id="q20"><br>
+<input id="q21"><br>
+<input id="q22"><br>
+<input id="q23"><br>
+<input id="q24"><br>
+<input id="q25"><br>
+
+<br>
+<button onclick="markTest()">Submit Test</button>
+
+<p id="result"></p>
+</div>
+
+<!-- ================= NAV ================= -->
+
+<div class="section">
+<button onclick="goHome()">🏠 Home</button>
+<button onclick="goBack()">⬅ Term 2</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+<script>
+
+function goHome(){
+window.location.href = "index.html";
+}
+
+function goBack(){
+window.location.href = "grade6-term2.html";
+}
+
+function goNext(){
+window.location.href = "grade6-term4.html";
+}
+
+function markTest(){
+
+let score = 0;
+
+// Maths
+if(q5.value=="10") score++;
+if(q6.value=="25") score++;
+if(q8.value=="60") score++;
+
+// Comprehension
+if(q1.value!="") score++;
+if(q2.value!="") score++;
+if(q3.value!="") score++;
+if(q4.value!="") score++;
+
+// General
+for(let i=7;i<=25;i++){
+if(document.getElementById("q"+i).value!=""){
+score++;
+}
+}
+
+// Show result
+document.getElementById("result").innerText =
+"🎉 Score: " + score + "/25";
+
+// SAVE SCORE
+let existing = localStorage.getItem("scores");
+let newScore = "Grade 6 Term 3: " + score + "/25";
+
+if(existing){
+existing = existing + "\n" + newScore;
+} else {
+existing = newScore;
+}
+
+localStorage.setItem("scores", existing);
+
+}
+
+</script>
+
+</body>
+</html>
