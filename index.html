@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Islamic Helper Hub</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fb;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            margin: 15px;
+            text-decoration: none;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #1e3c72;
+        }
+
+        button {
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 80%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Islamic Helper Hub</h1>
+    <p>Simple tools, helpful resources, and daily inspiration</p>
+</header>
+
+<nav>
+    <a href="#business">Tools</a>
+    <a href="#local">Community</a>
+    <a href="#school">School Help</a>
+    <a href="#islamic">Islamic</a>
+</nav>
+
+<section id="business">
+    <h2>💼 Helpful Tools</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Budget Calculator</h3>
+            <input type="number" id="income" placeholder="Monthly Income">
+            <input type="number" id="expenses" placeholder="Monthly Expenses">
+            <br><br>
+            <button onclick="calculateBudget()">Calculate</button>
+            <p id="result"></p>
+        </div>
+
+        <div class="card">
+            <h3>More Tools Coming Soon</h3>
+            <p>Invoice generator and planners will be added.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="local">
+    <h2>📅 Community Hub</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Events</h3>
+            <p>• Masjid programs<br>• Community events<br>• School updates</p>
+        </div>
+
+        <div class="card">
+            <h3>Useful Contacts</h3>
+            <p>• Tutors<br>• Services<br>• Local support</p>
+        </div>
+    </div>
+</section>
+
+<section id="school">
+    <h2>🧠 School Help</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Study Tips</h3>
+            <p>Helping parents support their children.</p>
+        </div>
+
+        <div class="card">
+            <h3>Planners</h3>
+            <p>Download simple study planners.</p>
+        </div>
+    </div>
+</section>
+
+<section id="islamic">
+    <h2>📚 Islamic Content</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Sahaba Stories</h3>
+            <p>Coming soon – your book series 👀🔥</p>
+        </div>
+
+        <div class="card">
+            <h3>Daily Reminder</h3>
+            <p>"The best of people are those who benefit others."</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Islamic Helper Hub</p>
+</footer>
+
+<script>
+function calculateBudget() {
+    let income = document.getElementById("income").value;
+    let expenses = document.getElementById("expenses").value;
+
+    let savings = income - expenses;
+
+    document.getElementById("result").innerText =
+        "Your savings: R" + savings;
+}
+</script>
+
+</body>
+</html>
