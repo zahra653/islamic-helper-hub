@@ -2,49 +2,50 @@
 <html>
 <head>
     <title>Islamic Helper Hub</title>
+
 <style>
 html {
     scroll-behavior: smooth;
 }
 
 body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f8f9fb;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fb;
+}
 
-        header {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
 
-        nav {
-            background-color: white;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
+nav {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
 
-        nav a {
-            margin: 15px;
-            text-decoration: none;
-            color: #1e3c72;
-            font-weight: bold;
-        }
+nav a {
+    margin: 15px;
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: bold;
+}
 
-        section {
-            padding: 30px;
-        }
+section {
+    padding: 30px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .card {
+.card {
     background: white;
     padding: 25px;
     border-radius: 20px;
@@ -52,15 +53,15 @@ body {
     transition: 0.3s;
 }
 
-        .card:hover {
+.card:hover {
     transform: translateY(-10px) scale(1.02);
 }
 
-        h2 {
-            color: #1e3c72;
-        }
+h2 {
+    color: #1e3c72;
+}
 
-        button {
+button {
     background: linear-gradient(90deg, #2a5298, #1e3c72);
     color: white;
     border: none;
@@ -68,7 +69,6 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 button:hover {
@@ -76,19 +76,19 @@ button:hover {
     opacity: 0.9;
 }
 
-        input {
-            padding: 8px;
-            margin: 5px;
-            width: 80%;
-        }
+input {
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e3c72;
-            color: white;
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e3c72;
+    color: white;
+}
+</style>
 </head>
 
 <body>
@@ -122,17 +122,15 @@ button:hover {
         </div>
 
         <div class="card">
-            <div class="card">
-    <h3>Invoice Generator</h3>
+            <h3>Invoice Generator</h3>
 
-    <input type="text" id="client" placeholder="Client Name"><br>
-    <input type="text" id="service" placeholder="Service Provided"><br>
-    <input type="number" id="amount" placeholder="Amount (R)"><br><br>
+            <input type="text" id="client" placeholder="Client Name"><br>
+            <input type="text" id="service" placeholder="Service Provided"><br>
+            <input type="number" id="amount" placeholder="Amount (R)"><br><br>
 
-    <button onclick="generateInvoice()">Generate Invoice</button>
+            <button onclick="generateInvoice()">Generate Invoice</button>
 
-    <p id="invoiceResult"></p>
-</div>
+            <p id="invoiceResult"></p>
         </div>
 
     </div>
@@ -144,12 +142,16 @@ button:hover {
     <div class="grid">
         <div class="card">
             <h3>Events</h3>
-            <p>• Masjid programs<br>• Community events<br>• School updates</p>
+            <p>• Durban masjid programs<br>• Community events<br>• School updates</p>
         </div>
 
         <div class="card">
             <h3>Useful Contacts</h3>
-            <p>• Tutors<br>• Services<br>• Local support</p>
+            <p>
+            • Tutors<br>
+            • Emergency numbers<br>
+            • Local services
+            </p>
         </div>
     </div>
 </section>
@@ -161,41 +163,25 @@ button:hover {
 
         <div class="card">
             <h3>Grade 4</h3>
-            <p>
-            Maths: Numbers, patterns<br>
-            English: Reading, writing<br>
-            NST: Plants & animals<br>
-            Geography: Maps & places
-            </p>
+            <p>Coming soon</p>
         </div>
 
         <div class="card">
-         <h3>Grade 5</h3>
-
-<p><a href="grade5-term1.html">📘 Term 1</a></p>
-<p><a href="grade5-term2.html">📘 Term 2</a></p>
-<p><a href="grade5-term3.html">📘 Term 3</a></p>
-<p><a href="grade5-term4.html">📘 Term 4</a></p>
+            <h3>Grade 5</h3>
+            <p><a href="grade5-term1.html">📘 Term 1</a></p>
+            <p><a href="grade5-term2.html">📘 Term 2</a></p>
+            <p><a href="grade5-term3.html">📘 Term 3</a></p>
+            <p><a href="grade5-term4.html">📘 Term 4</a></p>
         </div>
 
         <div class="card">
             <h3>Grade 6</h3>
-            <p>
-            Maths: Percentages, algebra<br>
-            English: Writing skills<br>
-            NST: Systems & environment<br>
-            Geography: Climate & weather
-            </p>
+            <p>Coming soon</p>
         </div>
 
         <div class="card">
             <h3>Grade 7</h3>
-            <p>
-            Maths: Integers, equations<br>
-            English: Essays & analysis<br>
-            NST: Matter & energy<br>
-            Geography: Resources & population
-            </p>
+            <p>Coming soon</p>
         </div>
 
     </div>
@@ -206,8 +192,8 @@ button:hover {
 
     <div class="grid">
         <div class="card">
-            <h3>Sahaba Stories</h3>
-            <p>Coming soon – your book series 👀🔥</p>
+            <h3>Sahaba Series</h3>
+            <p>Coming soon — your books 👀🔥</p>
         </div>
 
         <div class="card">
@@ -221,7 +207,6 @@ button:hover {
     <p>© 2026 Islamic Helper Hub</p>
 </footer>
 
-
 <script>
 function calculateBudget() {
     let income = document.getElementById("income").value;
@@ -233,13 +218,6 @@ function calculateBudget() {
         "Your savings: R" + savings;
 }
 
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView();
-}
-</script>
-
-</body>
-</html>
 function generateInvoice() {
     let client = document.getElementById("client").value;
     let service = document.getElementById("service").value;
@@ -248,3 +226,11 @@ function generateInvoice() {
     document.getElementById("invoiceResult").innerText =
         "Invoice for " + client + " | Service: " + service + " | Amount: R" + amount;
 }
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView();
+}
+</script>
+
+</body>
+</html>
