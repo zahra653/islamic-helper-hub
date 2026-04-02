@@ -122,7 +122,17 @@ button:hover {
         </div>
 
         <div class="card">
-            <h3>More Tools Coming Soon</h3>
+            <div class="card">
+    <h3>Invoice Generator</h3>
+
+    <input type="text" id="client" placeholder="Client Name"><br>
+    <input type="text" id="service" placeholder="Service Provided"><br>
+    <input type="number" id="amount" placeholder="Amount (R)"><br><br>
+
+    <button onclick="generateInvoice()">Generate Invoice</button>
+
+    <p id="invoiceResult"></p>
+</div>
             <p>Invoice generator and planners will be added.</p>
         </div>
 
@@ -200,3 +210,11 @@ function scrollToSection(sectionId) {
 
 </body>
 </html>
+function generateInvoice() {
+    let client = document.getElementById("client").value;
+    let service = document.getElementById("service").value;
+    let amount = document.getElementById("amount").value;
+
+    document.getElementById("invoiceResult").innerText =
+        "Invoice for " + client + " | Service: " + service + " | Amount: R" + amount;
+}
