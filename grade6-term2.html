@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 6 Term 2</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6fb;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📘 Grade 6 – Term 2</h1>
+
+<!-- ================= NOTES ================= -->
+
+<div class="section">
+<h2>📊 Maths – Fractions & Decimals</h2>
+
+<p>
+Fractions represent parts of a whole. You must be able to:
+• Simplify fractions  
+• Convert fractions to decimals  
+• Add and subtract fractions
+</p>
+
+<p>
+Example:
+1/2 = 0.5  
+3/4 = 0.75  
+</p>
+</div>
+
+<div class="section">
+<h2>📖 English – Reading & Writing</h2>
+
+<p>
+Learners now:
+• Read longer texts  
+• Identify main ideas  
+• Write structured paragraphs  
+</p>
+
+<p>
+Focus:
+• Topic sentence  
+• Supporting details  
+• Conclusion  
+</p>
+</div>
+
+<div class="section">
+<h2>🔬 NST – Energy & Systems</h2>
+
+<p>
+Energy is needed for everything we do.
+Types:
+• Electrical  
+• Heat  
+• Movement  
+</p>
+
+<p>
+Systems are groups of parts working together.
+</p>
+</div>
+
+<div class="section">
+<h2>🌍 Geography – Climate & Weather</h2>
+
+<p>
+Weather = daily conditions  
+Climate = long-term patterns  
+</p>
+
+<p>
+Example:
+Durban → warm & humid climate
+</p>
+</div>
+
+<!-- ================= COMPREHENSION ================= -->
+
+<div class="section">
+<h2>📖 Comprehension</h2>
+
+<p>
+Fatimah was learning about fractions in class. At first, she found it difficult to understand how they worked. 
+Her teacher explained using real-life examples like cutting a cake into equal parts. 
+Soon, Fatimah began to understand and even helped her classmates. 
+She realised that practice and patience can make learning easier.
+</p>
+
+<p><b>Questions:</b></p>
+
+1. What was Fatimah learning?<br>
+<input id="q1"><br><br>
+
+2. Why did she struggle?<br>
+<input id="q2"><br><br>
+
+3. What helped her understand?<br>
+<input id="q3"><br><br>
+
+4. What lesson did she learn?<br>
+<input id="q4"><br><br>
+
+</div>
+
+<!-- ================= TEST ================= -->
+
+<div class="section">
+<h2>📝 Test (25 Questions)</h2>
+
+<p>5. 1/2 as decimal</p>
+<input id="q5"><br>
+
+<p>6. 3/4 as decimal</p>
+<input id="q6"><br>
+
+<p>7. 10 × 5</p>
+<input id="q7"><br>
+
+<p>8. 20 ÷ 4</p>
+<input id="q8"><br>
+
+<p>9. Name one type of energy</p>
+<input id="q9"><br>
+
+<p>10. What is weather?</p>
+<input id="q10"><br>
+
+<!-- EXTENDED -->
+<p>11–25: Answer fully</p>
+
+<input id="q11"><br>
+<input id="q12"><br>
+<input id="q13"><br>
+<input id="q14"><br>
+<input id="q15"><br>
+<input id="q16"><br>
+<input id="q17"><br>
+<input id="q18"><br>
+<input id="q19"><br>
+<input id="q20"><br>
+<input id="q21"><br>
+<input id="q22"><br>
+<input id="q23"><br>
+<input id="q24"><br>
+<input id="q25"><br>
+
+<br>
+<button onclick="markTest()">Submit Test</button>
+
+<p id="result"></p>
+</div>
+
+<!-- ================= NAV ================= -->
+
+<div class="section">
+<button onclick="goHome()">🏠 Home</button>
+<button onclick="goBack()">⬅ Term 1</button>
+<button onclick="goNext()">Next ➡</button>
+</div>
+
+<script>
+
+function goHome(){
+window.location.href = "index.html";
+}
+
+function goBack(){
+window.location.href = "grade6-term1.html";
+}
+
+function goNext(){
+window.location.href = "grade6-term3.html";
+}
+
+function markTest(){
+
+let score = 0;
+
+// Maths
+if(q5.value=="0.5") score++;
+if(q6.value=="0.75") score++;
+if(q7.value=="50") score++;
+if(q8.value=="5") score++;
+
+// Comprehension (basic check)
+if(q1.value!="") score++;
+if(q2.value!="") score++;
+if(q3.value!="") score++;
+if(q4.value!="") score++;
+
+// General
+for(let i=9;i<=25;i++){
+if(document.getElementById("q"+i).value!=""){
+score++;
+}
+}
+
+// Show result
+document.getElementById("result").innerText =
+"🎉 Score: " + score + "/25";
+
+// SAVE SCORE
+let existing = localStorage.getItem("scores");
+let newScore = "Grade 6 Term 2: " + score + "/25";
+
+if(existing){
+existing = existing + "\n" + newScore;
+} else {
+existing = newScore;
+}
+
+localStorage.setItem("scores", existing);
+
+}
+
+</script>
+
+</body>
+</html>
