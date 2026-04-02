@@ -7,32 +7,8 @@
 html {
     scroll-behavior: smooth;
 }
-    <script>
-let user = localStorage.getItem("user");
-
-if(!user){
-window.location.href = "login.html";
-}
-</script>
-    
-    </script>
-let user = localStorage.getItem("user");
-
-if(user){
-document.getElementById("welcome").innerText = "Welcome, " + user;
-}
-
-function logout(){
-localStorage.removeItem("user");
-window.location.href = "login.html";
-}
-</script>
 
 body {
-    <button onclick="location.href='dashboard.html'">📊 Dashboard</button>
-    <button onclick="location.href='dashboard.html'">Dashboard</button>
-    <h3 id="welcome"></h3>
-<button onclick="logout()">Logout</button>
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f8f9fb;
@@ -117,6 +93,11 @@ footer {
 
 <body>
 
+<!-- ✅ DASHBOARD + USER -->
+<button onclick="location.href='dashboard.html'">📊 Dashboard</button>
+<h3 id="welcome"></h3>
+<button onclick="logout()">Logout</button>
+
 <header>
     <h1>Islamic Helper Hub</h1>
     <p>Helping you stay organised, informed, and inspired — every day.</p>
@@ -184,13 +165,13 @@ footer {
     <h2>🧠 CAPS School Hub</h2>
 
     <div class="grid">
-<div class="card">
-    <h3>Grade 4</h3>
 
-<p><a href="grade4-term1.html">📘 Term 1</a></p>
-<p><a href="grade4-term2.html">📘 Term 2</a></p>
-<p><a href="grade4-term3.html">📘 Term 3</a></p>
-<p><a href="grade4-term4.html">📘 Term 4</a></p>
+        <div class="card">
+            <h3>Grade 4</h3>
+            <p><a href="grade4-term1.html">📘 Term 1</a></p>
+            <p><a href="grade4-term2.html">📘 Term 2</a></p>
+            <p><a href="grade4-term3.html">📘 Term 3</a></p>
+            <p><a href="grade4-term4.html">📘 Term 4</a></p>
         </div>
 
         <div class="card">
@@ -235,10 +216,29 @@ footer {
 </footer>
 
 <script>
+
+// LOGIN PROTECTION
+let user = localStorage.getItem("user");
+
+if(!user){
+window.location.href = "login.html";
+}
+
+// SHOW USER
+if(user){
+document.getElementById("welcome").innerText = "Welcome, " + user;
+}
+
+// LOGOUT
+function logout(){
+localStorage.removeItem("user");
+window.location.href = "login.html";
+}
+
+// TOOLS
 function calculateBudget() {
     let income = document.getElementById("income").value;
     let expenses = document.getElementById("expenses").value;
-
     let savings = income - expenses;
 
     document.getElementById("result").innerText =
@@ -254,9 +254,11 @@ function generateInvoice() {
         "Invoice for " + client + " | Service: " + service + " | Amount: R" + amount;
 }
 
+// NAVIGATION
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView();
 }
+
 </script>
 
 </body>
