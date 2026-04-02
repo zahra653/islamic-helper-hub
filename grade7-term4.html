@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 7 Term 4</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6fb;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📘 Grade 7 – Term 4</h1>
+
+<!-- ================= NOTES ================= -->
+
+<div class="section">
+<h2>📊 Maths – Full Revision</h2>
+
+<p>
+Topics:
+• Integers  
+• Algebra  
+• Percentages  
+• Ratios  
+• BODMAS  
+</p>
+
+<p>
+Example:
+10 + 2 × 5 = 20
+</p>
+</div>
+
+<div class="section">
+<h2>📖 English – Reading & Writing</h2>
+
+<p>
+Focus:
+• Deep comprehension  
+• Writing structured answers  
+• Grammar & vocabulary  
+</p>
+
+<p>
+You must:
+• Explain clearly  
+• Support answers  
+</p>
+</div>
+
+<div class="section">
+<h2>🔬 NST – Full Revision</h2>
+
+<p>
+Topics:
+• Cells  
+• Systems  
+• Energy  
+• Ecosystems  
+</p>
+
+<p>
+All systems work together to support life.
+</p>
+</div>
+
+<div class="section">
+<h2>🌍 Geography – Full Revision</h2>
+
+<p>
+Topics:
+• Physical features  
+• Population  
+• Resources  
+• Development  
+</p>
+
+<p>
+These affect how people live and grow.
+</p>
+</div>
+
+<!-- ================= COMPREHENSION ================= -->
+
+<div class="section">
+<h2>📖 Comprehension</h2>
+
+<p>
+As the year came to an end, the learners reflected on everything they had studied. 
+They realised how much they had grown in knowledge and confidence. 
+Through teamwork, practice, and effort, they were able to overcome challenges. 
+Their teacher reminded them that learning is a journey that continues beyond the classroom.
+</p>
+
+<p><b>Questions:</b></p>
+
+1. What were the learners doing?<br>
+<input id="q1"><br><br>
+
+2. What did they realise?<br>
+<input id="q2"><br><br>
+
+3. How did they overcome challenges?<br>
+<input id="q3"><br><br>
+
+4. What message did the teacher give?<br>
+<input id="q4"><br><br>
+
+</div>
+
+<!-- ================= TEST ================= -->
+
+<div class="section">
+<h2>📝 Final Test (25 Questions)</h2>
+
+<p>5. -5 + 10</p>
+<input id="q5"><br>
+
+<p>6. 50% of 60</p>
+<input id="q6"><br>
+
+<p>7. 1/2 as decimal</p>
+<input id="q7"><br>
+
+<p>8. x + 5 = 9</p>
+<input id="q8"><br>
+
+<p>9. 6 × 7</p>
+<input id="q9"><br>
+
+<p>10. What is an ecosystem?</p>
+<input id="q10"><br>
+
+<!-- EXTENDED -->
+<p>11–25: Answer fully</p>
+
+<input id="q11"><br>
+<input id="q12"><br>
+<input id="q13"><br>
+<input id="q14"><br>
+<input id="q15"><br>
+<input id="q16"><br>
+<input id="q17"><br>
+<input id="q18"><br>
+<input id="q19"><br>
+<input id="q20"><br>
+<input id="q21"><br>
+<input id="q22"><br>
+<input id="q23"><br>
+<input id="q24"><br>
+<input id="q25"><br>
+
+<br>
+<button onclick="markTest()">Submit Test</button>
+
+<p id="result"></p>
+</div>
+
+<!-- ================= NAV ================= -->
+
+<div class="section">
+<button onclick="goHome()">🏠 Home</button>
+<button onclick="goBack()">⬅ Term 3</button>
+<button onclick="finish()">Finish 🎉</button>
+</div>
+
+<script>
+
+function goHome(){
+window.location.href = "index.html";
+}
+
+function goBack(){
+window.location.href = "grade7-term3.html";
+}
+
+function finish(){
+alert("🎉 You have completed Grade 7!");
+}
+
+function markTest(){
+
+let score = 0;
+
+// Maths
+if(q5.value=="5") score++;
+if(q6.value=="30") score++;
+if(q7.value=="0.5") score++;
+if(q8.value=="4") score++;
+if(q9.value=="42") score++;
+
+// Comprehension
+if(q1.value!="") score++;
+if(q2.value!="") score++;
+if(q3.value!="") score++;
+if(q4.value!="") score++;
+
+// General
+for(let i=10;i<=25;i++){
+if(document.getElementById("q"+i).value!=""){
+score++;
+}
+}
+
+// Show result
+document.getElementById("result").innerText =
+"🎉 Final Score: " + score + "/25";
+
+// SAVE SCORE
+let existing = localStorage.getItem("scores");
+let newScore = "Grade 7 Term 4: " + score + "/25";
+
+if(existing){
+existing = existing + "\n" + newScore;
+} else {
+existing = newScore;
+}
+
+localStorage.setItem("scores", existing);
+
+}
+
+</script>
+
+</body>
+</html>
