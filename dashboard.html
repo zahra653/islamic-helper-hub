@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6fb;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📊 Student Dashboard</h1>
+
+<h2 id="welcome"></h2>
+
+<div class="card">
+<h3>📚 Quick Access</h3>
+
+<button onclick="go('grade4-term1.html')">Grade 4</button>
+<button onclick="go('grade5-term1.html')">Grade 5</button>
+
+</div>
+
+<div class="card">
+<h3>📊 Your Scores</h3>
+
+<p id="scores">No scores yet</p>
+</div>
+
+<div class="card">
+<h3>⚙️ Account</h3>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<script>
+
+// PROTECT PAGE
+let user = localStorage.getItem("user");
+
+if(!user){
+window.location.href = "login.html";
+}
+
+// SHOW NAME
+document.getElementById("welcome").innerText = "Welcome, " + user;
+
+// NAVIGATION
+function go(page){
+window.location.href = page;
+}
+
+// LOGOUT
+function logout(){
+localStorage.removeItem("user");
+window.location.href = "login.html";
+}
+
+// LOAD SCORES
+let savedScores = localStorage.getItem("scores");
+
+if(savedScores){
+document.getElementById("scores").innerText = savedScores;
+}
+
+</script>
+
+</body>
+</html>
