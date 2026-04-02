@@ -84,6 +84,8 @@ let savedScores = localStorage.getItem("scores");
 
 if(savedScores){
 document.getElementById("scores").innerText = savedScores;
+} else {
+document.getElementById("scores").innerText = "No scores yet";
 }
 
 </script>
