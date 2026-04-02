@@ -2,65 +2,232 @@
 <html>
 <head>
 <title>Grade 5 Term 1</title>
+
 <style>
 body {font-family: Arial; padding:20px; background:#f4f6fb;}
 .section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
-button {padding:10px; background:#2a5298; color:white; border:none;}
+h2 {color:#1e3c72;}
+button {padding:10px; background:#2a5298; color:white; border:none; border-radius:10px;}
+input {padding:8px; margin:5px; width:80%;}
 </style>
 </head>
+
 <body>
 
-<h1>Grade 5 – Term 1</h1>
+<h1>Grade 5 – Term 1 Learning Hub</h1>
 
+<!-- ================= MATHS ================= -->
 <div class="section">
-<h2>Maths – Fractions</h2>
-<p><b>Definition:</b> Fractions show parts of a whole</p>
-<p><b>Example:</b> 1/2 = half</p>
-<p><b>Tip:</b> Same denominator = add easily</p>
-<p><b>Mistake:</b> Bigger denominator ≠ bigger fraction</p>
+<h2>📘 Maths – Fractions</h2>
 
-<h3>Practice</h3>
+<p><b>Definition:</b> Fractions show parts of a whole.</p>
+<p><b>Example:</b> 1/2 means one part out of two equal parts.</p>
+
+<p><b>Steps:</b><br>
+1. Same denominator → add top numbers<br>
+2. Keep denominator<br>
+3. Simplify
+</p>
+
+<p><b>Common Mistake:</b> Thinking 1/3 is bigger than 1/2 ❌</p>
+
+<h3>🧪 Practice</h3>
 <p>1. 1/4 + 2/4 = ?</p>
+<input id="pm1">
+
 <p>2. Simplify 2/4</p>
+<input id="pm2">
 
-<a href="#">Download Maths Notes</a>
+<button onclick="checkPractice()">Check Maths</button>
+<p id="practiceResult"></p>
 </div>
 
+<!-- ================= ENGLISH ================= -->
 <div class="section">
-<h2>English – Comprehension</h2>
-<p>Read carefully and answer questions</p>
+<h2>📘 English – Comprehension</h2>
 
-<h3>Practice</h3>
-<p>What is the main idea?</p>
+<p><b>Read the passage carefully:</b></p>
 
-<a href="#">Download English Notes</a>
+<p>
+Ahmed woke up before sunrise and quietly got ready for school. 
+He helped his younger sister pack her bag and made sure she had everything she needed. 
+On the way to school, he noticed an elderly man struggling to carry his groceries. 
+Without hesitation, Ahmed rushed over and offered to help him. 
+The man smiled and thanked him for his kindness. 
+Later that day, Ahmed’s teacher praised him for always showing good character and responsibility.
+</p>
+
+<h3>🧠 Questions</h3>
+
+<p>1. What time of day did Ahmed wake up?</p>
+<input id="e1">
+
+<p>2. Who did Ahmed help at home?</p>
+<input id="e2">
+
+<p>3. What problem did the elderly man have?</p>
+<input id="e3">
+
+<p>4. What did Ahmed do to help the man?</p>
+<input id="e4">
+
+<p>5. What does this story teach us about Ahmed?</p>
+<input id="e5">
+
+<p>6. Find a word that shows Ahmed is responsible.</p>
+<input id="e6">
+
+<p>7. Why do you think the teacher praised Ahmed?</p>
+<input id="e7">
+
+<p>8. What is one lesson you learned from this story?</p>
+<input id="e8">
+
+<button onclick="checkEnglish()">Check Answers</button>
+<p id="engResult"></p>
 </div>
 
+<!-- ================= NST ================= -->
 <div class="section">
-<h2>NST – Energy</h2>
-<p>Energy is the ability to do work</p>
-<a href="#">Download NST Notes</a>
+<h2>📘 NST – Energy</h2>
+
+<p><b>Definition:</b> Energy is the ability to do work.</p>
+<p><b>Types:</b> Heat, light, movement.</p>
+
+<h3>🧪 Practice</h3>
+<p>Name one type of energy:</p>
+<input id="pn1">
 </div>
 
+<!-- ================= GEO ================= -->
 <div class="section">
-<h2>Geography – Maps</h2>
-<p>Maps help us understand places</p>
-<a href="#">Download Geography Notes</a>
+<h2>📘 Geography – Maps</h2>
+
+<p><b>Definition:</b> Maps show places.</p>
+<p><b>Directions:</b> North, South, East, West.</p>
+
+<h3>🧪 Practice</h3>
+<p>Opposite of North?</p>
+<input id="pg1">
 </div>
 
+<!-- ================= FULL TEST ================= -->
 <div class="section">
-<h2>Test</h2>
-<input id="q1">
-<button onclick="check()">Check</button>
-<p id="r"></p>
+<h2>🎯 End of Term Test (25 Marks)</h2>
+
+<!-- Maths -->
+<h3>Maths</h3>
+<p>1. 1/2 + 1/2 = ?</p><input id="q1">
+<p>2. Simplify 2/4</p><input id="q2">
+<p>3. 25% of 100 = ?</p><input id="q3">
+<p>4. x + 3 = 7</p><input id="q4">
+<p>5. 3/6 simplified</p><input id="q5">
+
+<!-- English -->
+<h3>English</h3>
+<p>Ali helped his mother before school.</p>
+<p>6. What did he do?</p><input id="q6">
+<p>7. Where was he going?</p><input id="q7">
+<p>8. What type of person is he?</p><input id="q8">
+<p>9. When did this happen?</p><input id="q9">
+<p>10. Why is he good?</p><input id="q10">
+
+<!-- NST -->
+<h3>NST</h3>
+<p>11. What is energy?</p><input id="q11">
+<p>12. Name one type</p><input id="q12">
+<p>13. What is a machine?</p><input id="q13">
+<p>14. Example of machine</p><input id="q14">
+<p>15. What is movement energy?</p><input id="q15">
+
+<!-- Geography -->
+<h3>Geography</h3>
+<p>16. What is a map?</p><input id="q16">
+<p>17. Opposite North?</p><input id="q17">
+<p>18. Map symbol example</p><input id="q18">
+<p>19. Maps help us do what?</p><input id="q19">
+<p>20. What is a place?</p><input id="q20">
+
+<!-- Mixed -->
+<h3>Mixed</h3>
+<p>21. 1/2 as decimal</p><input id="q21">
+<p>22. What is a sentence?</p><input id="q22">
+<p>23. What is a system?</p><input id="q23">
+<p>24. Why help others?</p><input id="q24">
+<p>25. Good behaviour example</p><input id="q25">
+
+<br><br>
+<button onclick="markTest()">Submit Test</button>
+<p id="result"></p>
 </div>
 
+<!-- NAV -->
+<button onclick="location.href='index.html'">Home</button>
+<button onclick="location.href='index.html#school'">Back</button>
 <button onclick="location.href='grade5-term2.html'">Next</button>
 
 <script>
-function check(){
-document.getElementById("r").innerText="Good attempt!";
+
+function checkPractice(){
+let score=0;
+if(pm1.value=="3/4") score++;
+if(pm2.value=="1/2") score++;
+document.getElementById("practiceResult").innerText="Practice Score: "+score+"/2";
 }
+
+function checkEnglish(){
+let score = 0;
+
+if(e1.value.toLowerCase().includes("morning") || e1.value.toLowerCase().includes("sunrise")) score++;
+if(e2.value.toLowerCase().includes("sister")) score++;
+if(e3.value.toLowerCase().includes("groceries")) score++;
+if(e4.value.toLowerCase().includes("help")) score++;
+if(e5.value.toLowerCase().includes("kind") || e5.value.toLowerCase().includes("responsible")) score++;
+if(e6.value!="") score++;
+if(e7.value!="") score++;
+if(e8.value!="") score++;
+
+document.getElementById("engResult").innerText =
+"Comprehension Score: " + score + "/8";
+}
+
+function markTest(){
+let score = 0;
+
+if(q1.value=="1") score++;
+if(q2.value=="1/2") score++;
+if(q3.value=="25") score++;
+if(q4.value=="4") score++;
+if(q5.value=="1/2") score++;
+
+if(q6.value!="") score++;
+if(q7.value!="") score++;
+if(q8.value!="") score++;
+if(q9.value!="") score++;
+if(q10.value!="") score++;
+
+if(q11.value.toLowerCase().includes("work")) score++;
+if(q12.value!="") score++;
+if(q13.value.toLowerCase().includes("work")) score++;
+if(q14.value!="") score++;
+if(q15.value.toLowerCase().includes("move")) score++;
+
+if(q16.value.toLowerCase().includes("place")) score++;
+if(q17.value.toLowerCase().includes("south")) score++;
+if(q18.value!="") score++;
+if(q19.value.toLowerCase().includes("find")) score++;
+if(q20.value!="") score++;
+
+if(q21.value=="0.5") score++;
+if(q22.value.toLowerCase().includes("complete")) score++;
+if(q23.value.toLowerCase().includes("together")) score++;
+if(q24.value!="") score++;
+if(q25.value!="") score++;
+
+document.getElementById("result").innerText =
+"🎉 Final Score: " + score + "/25";
+}
+
 </script>
 
 </body>
