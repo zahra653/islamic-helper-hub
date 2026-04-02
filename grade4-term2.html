@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 4 Term 2</title>
 
+<style>
+body {font-family: Arial; padding:20px; background:#f4f6fb;}
+.section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
+h2 {color:#1e3c72;}
+button {padding:10px; background:#2a5298; color:white; border:none; border-radius:10px;}
+input {padding:8px; margin:5px; width:80%;}
+</style>
+</head>
+
+<body>
+
+<h1>Grade 4 – Term 2 Learning Hub</h1>
+
+<!-- MATHS -->
+<div class="section">
+<h2>📘 Maths – Multiplication & Division</h2>
+
+<p><b>Definition:</b> Multiplication is repeated addition.</p>
+<p><b>Example:</b> 3 × 4 = 12</p>
+
+<h3>🧪 Practice</h3>
+<p>1. 4 × 5 = ?</p>
+<input id="pm1">
+
+<p>2. 20 ÷ 4 = ?</p>
+<input id="pm2">
+
+<button onclick="checkPractice()">Check Maths</button>
+<p id="practiceResult"></p>
+</div>
+
+<!-- ENGLISH -->
+<div class="section">
+<h2>📘 English – Comprehension</h2>
+
+<p>
+Zayd enjoyed reading books every afternoon. One day, he found a story about a brave explorer. 
+He became excited and shared the story with his friends at school. 
+His teacher was happy to see his love for reading.
+</p>
+
+<p>1. What did Zayd enjoy?</p>
+<input id="e1">
+
+<p>2. What did he find?</p>
+<input id="e2">
+
+<p>3. What did he do at school?</p>
+<input id="e3">
+
+<p>4. How did the teacher feel?</p>
+<input id="e4">
+
+<p>5. What does Zayd like?</p>
+<input id="e5">
+
+<p>6. What lesson can we learn?</p>
+<input id="e6">
+
+<p>7. What kind of person is Zayd?</p>
+<input id="e7">
+
+<p>8. Would you do the same?</p>
+<input id="e8">
+
+<button onclick="checkEnglish()">Check</button>
+<p id="engResult"></p>
+</div>
+
+<!-- NST -->
+<div class="section">
+<h2>📘 NST – Energy</h2>
+
+<p>Energy helps us do work.</p>
+
+<p>Name one type of energy:</p>
+<input id="pn1">
+</div>
+
+<!-- GEO -->
+<div class="section">
+<h2>📘 Geography – Weather</h2>
+
+<p>Weather changes daily (sun, rain, wind).</p>
+
+<p>What is weather?</p>
+<input id="pg1">
+</div>
+
+<!-- TEST -->
+<div class="section">
+<h2>🎯 End of Term Test (25)</h2>
+
+<h3>Maths</h3>
+<p>1. 5 × 4</p><input id="q1">
+<p>2. 20 ÷ 5</p><input id="q2">
+<p>3. 6 × 3</p><input id="q3">
+<p>4. 12 ÷ 3</p><input id="q4">
+<p>5. 10 × 2</p><input id="q5">
+
+<h3>English</h3>
+<p>Zayd read a book.</p>
+<p>6. What did he do?</p><input id="q6">
+<p>7. What did he read?</p><input id="q7">
+<p>8. What type of learner?</p><input id="q8">
+<p>9. Where did he share?</p><input id="q9">
+<p>10. Why praised?</p><input id="q10">
+
+<h3>NST</h3>
+<p>11. What is energy?</p><input id="q11">
+<p>12. Name one type</p><input id="q12">
+<p>13. What gives energy?</p><input id="q13">
+<p>14. Example of energy</p><input id="q14">
+<p>15. Why needed?</p><input id="q15">
+
+<h3>Geography</h3>
+<p>16. What is weather?</p><input id="q16">
+<p>17. Example of weather</p><input id="q17">
+<p>18. What is rain?</p><input id="q18">
+<p>19. What is sun?</p><input id="q19">
+<p>20. Why weather important?</p><input id="q20">
+
+<h3>Mixed</h3>
+<p>21. 1/2 of 8</p><input id="q21">
+<p>22. Sentence?</p><input id="q22">
+<p>23. Map?</p><input id="q23">
+<p>24. Why help?</p><input id="q24">
+<p>25. Good behaviour?</p><input id="q25">
+
+<button onclick="markTest()">Submit</button>
+<p id="result"></p>
+</div>
+
+<!-- NAV -->
+<button onclick="location.href='index.html'">Home</button>
+<button onclick="location.href='index.html#school'">Back</button>
+<button onclick="location.href='grade4-term3.html'">Next</button>
+
+<script>
+function checkPractice(){
+let score=0;
+if(pm1.value=="20") score++;
+if(pm2.value=="5") score++;
+document.getElementById("practiceResult").innerText="Score: "+score+"/2";
+}
+
+function checkEnglish(){
+let score=0;
+for(let i=1;i<=8;i++){
+if(document.getElementById("e"+i).value!="") score++;
+}
+document.getElementById("engResult").innerText="Score: "+score+"/8";
+}
+
+function markTest(){
+let score=0;
+if(q1.value=="20") score++;
+if(q2.value=="4") score++;
+if(q3.value=="18") score++;
+if(q4.value=="4") score++;
+if(q5.value=="20") score++;
+
+for(let i=6;i<=25;i++){
+if(document.getElementById("q"+i).value!="") score++;
+}
+
+document.getElementById("result").innerText="🎉 Score: "+score+"/25";
+}
+</script>
+
+</body>
+</html>
