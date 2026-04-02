@@ -2,54 +2,199 @@
 <html>
 <head>
 <title>Grade 5 Term 2</title>
+
 <style>
 body {font-family: Arial; padding:20px; background:#f4f6fb;}
 .section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
-button {padding:10px; background:#2a5298; color:white; border:none;}
+h2 {color:#1e3c72;}
+button {padding:10px; background:#2a5298; color:white; border:none; border-radius:10px;}
+input {padding:8px; margin:5px; width:80%;}
 </style>
 </head>
+
 <body>
 
-<h1>Grade 5 – Term 2</h1>
+<h1>Grade 5 – Term 2 Learning Hub</h1>
 
+<!-- ================= MATHS ================= -->
 <div class="section">
-<h2>Maths – Decimals</h2>
-<p>Decimals show parts of a whole</p>
-<p>0.5 = 1/2</p>
-<a href="#">Download Maths Notes</a>
+<h2>📘 Maths – Decimals</h2>
+
+<p><b>Definition:</b> Decimals represent parts of a whole.</p>
+<p><b>Example:</b> 0.5 = 1/2</p>
+
+<p><b>Steps:</b><br>
+1. Line up decimal points<br>
+2. Add normally<br>
+3. Check place value
+</p>
+
+<p><b>Common Mistake:</b> Not lining up decimal points ❌</p>
+
+<h3>🧪 Practice</h3>
+<p>1. 0.4 + 0.3 = ?</p>
+<input id="pm1">
+
+<p>2. Write 1/2 as a decimal</p>
+<input id="pm2">
+
+<button onclick="checkPractice()">Check Maths</button>
+<p id="practiceResult"></p>
 </div>
 
+<!-- ================= ENGLISH ================= -->
 <div class="section">
-<h2>English – Paragraphs</h2>
-<p>Write clear sentences</p>
-<a href="#">Download English Notes</a>
+<h2>📘 English – Comprehension</h2>
+
+<p><b>Read the passage carefully:</b></p>
+
+<p>
+Fatimah always tried her best at school. She listened carefully in class and completed her work on time. 
+One day, her teacher gave the class a difficult task. While many learners struggled, Fatimah remained calm and worked through the problem step by step. 
+At the end of the lesson, she helped her friends understand the work. Her teacher praised her for her patience and leadership.
+</p>
+
+<h3>🧠 Questions</h3>
+
+<p>1. What kind of learner was Fatimah?</p>
+<input id="e1">
+
+<p>2. What did she do when the work was difficult?</p>
+<input id="e2">
+
+<p>3. How did she help her classmates?</p>
+<input id="e3">
+
+<p>4. What did the teacher say about her?</p>
+<input id="e4">
+
+<p>5. What quality did Fatimah show?</p>
+<input id="e5">
+
+<p>6. Find a word that shows she is hardworking</p>
+<input id="e6">
+
+<p>7. Why did others struggle?</p>
+<input id="e7">
+
+<p>8. What lesson can we learn?</p>
+<input id="e8">
+
+<button onclick="checkEnglish()">Check Answers</button>
+<p id="engResult"></p>
 </div>
 
+<!-- ================= NST ================= -->
 <div class="section">
-<h2>NST – Forces</h2>
-<p>Push and pull forces</p>
-<a href="#">Download NST Notes</a>
+<h2>📘 NST – Forces</h2>
+
+<p><b>Definition:</b> Forces are pushes or pulls.</p>
+<p><b>Examples:</b> Pushing a door, pulling a rope.</p>
+
+<h3>🧪 Practice</h3>
+<p>Name one force:</p>
+<input id="pn1">
 </div>
 
+<!-- ================= GEO ================= -->
 <div class="section">
-<h2>Geography – Africa</h2>
-<p>Africa has many countries</p>
-<a href="#">Download Geography Notes</a>
+<h2>📘 Geography – Africa</h2>
+
+<p><b>Definition:</b> Africa is a continent with many countries.</p>
+
+<h3>🧪 Practice</h3>
+<p>Name one African country:</p>
+<input id="pg1">
 </div>
 
+<!-- ================= TEST ================= -->
 <div class="section">
-<h2>Test</h2>
-<input id="q1">
-<button onclick="check()">Check</button>
-<p id="r"></p>
+<h2>🎯 End of Term Test (25 Marks)</h2>
+
+<h3>Maths</h3>
+<p>1. 0.2 + 0.3 = ?</p><input id="q1">
+<p>2. 1/2 as decimal</p><input id="q2">
+<p>3. Value of 5 in 3.45</p><input id="q3">
+<p>4. 0.5 + 0.5</p><input id="q4">
+<p>5. 10 x 2</p><input id="q5">
+
+<h3>English</h3>
+<p>Fatimah worked hard in class.</p>
+<p>6. What did she do?</p><input id="q6">
+<p>7. Where was she?</p><input id="q7">
+<p>8. What type of learner?</p><input id="q8">
+<p>9. What did she help with?</p><input id="q9">
+<p>10. Why was she praised?</p><input id="q10">
+
+<h3>NST</h3>
+<p>11. What is a force?</p><input id="q11">
+<p>12. Example of push</p><input id="q12">
+<p>13. What does force do?</p><input id="q13">
+<p>14. What is gravity?</p><input id="q14">
+<p>15. What is friction?</p><input id="q15">
+
+<h3>Geography</h3>
+<p>16. What is Africa?</p><input id="q16">
+<p>17. Name a country</p><input id="q17">
+<p>18. What is climate?</p><input id="q18">
+<p>19. What is weather?</p><input id="q19">
+<p>20. What is a continent?</p><input id="q20">
+
+<h3>Mixed</h3>
+<p>21. 1/2 = decimal?</p><input id="q21">
+<p>22. What is a sentence?</p><input id="q22">
+<p>23. What is energy?</p><input id="q23">
+<p>24. Why help others?</p><input id="q24">
+<p>25. Good behaviour?</p><input id="q25">
+
+<br><br>
+<button onclick="markTest()">Submit Test</button>
+<p id="result"></p>
 </div>
 
+<!-- NAV -->
+<button onclick="location.href='index.html'">Home</button>
+<button onclick="location.href='index.html#school'">Back</button>
 <button onclick="location.href='grade5-term3.html'">Next</button>
 
 <script>
-function check(){
-document.getElementById("r").innerText="Well done!";
+
+function checkPractice(){
+let score=0;
+if(pm1.value=="0.7") score++;
+if(pm2.value=="0.5") score++;
+document.getElementById("practiceResult").innerText="Practice Score: "+score+"/2";
 }
+
+function checkEnglish(){
+let score=0;
+if(e1.value!="") score++;
+if(e2.value!="") score++;
+if(e3.value!="") score++;
+if(e4.value!="") score++;
+if(e5.value!="") score++;
+if(e6.value!="") score++;
+if(e7.value!="") score++;
+if(e8.value!="") score++;
+document.getElementById("engResult").innerText="Score: "+score+"/8";
+}
+
+function markTest(){
+let score=0;
+
+if(q1.value=="0.5") score++;
+if(q2.value=="0.5") score++;
+if(q3.value=="0.05") score++;
+if(q4.value=="1") score++;
+if(q5.value=="20") score++;
+
+for(let i=6;i<=25;i++){
+if(document.getElementById("q"+i).value!="") score++;
+}
+
+document.getElementById("result").innerText="🎉 Score: "+score+"/25";
+}
+
 </script>
 
 </body>
