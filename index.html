@@ -14,6 +14,19 @@ if(!user){
 window.location.href = "login.html";
 }
 </script>
+    
+    </script>
+let user = localStorage.getItem("user");
+
+if(user){
+document.getElementById("welcome").innerText = "Welcome, " + user;
+}
+
+function logout(){
+localStorage.removeItem("user");
+window.location.href = "login.html";
+}
+</script>
 
 body {
     <h3 id="welcome"></h3>
