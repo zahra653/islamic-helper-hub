@@ -1,184 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grade 5 Term 4</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f4f6fb;
-        }
-
-        h1 {
-            color: #1e3c72;
-        }
-
-        .section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
-        }
-
-        .nav-buttons {
-            margin-top: 30px;
-        }
-
-        button {
-            padding: 10px 15px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 10px;
-            background: #2a5298;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-    </style>
+<title>Grade 5 Term 4</title>
+<style>
+body {font-family: Arial; padding:20px; background:#f4f6fb;}
+.section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
+button {padding:10px; background:#2a5298; color:white; border:none;}
+</style>
 </head>
-
 <body>
 
-<h1>Grade 5 – Term 4 Notes</h1>
+<h1>Grade 5 – Term 4</h1>
 
-<!-- MATHS -->
 <div class="section">
-<h2>Maths – Term 4</h2>
-
-<h3>📘 Revision</h3>
-<p>Review all key topics from the year: fractions, decimals, percentages, and algebra.</p>
-
-<h3>📘 Problem Solving</h3>
-<p>Apply maths skills to real-life situations.</p>
-
-<h3>📘 Data Handling</h3>
-<p>Reading charts, graphs, and tables.</p>
-
-<h3>📘 Word Problems</h3>
-<p>Use different maths skills together to solve problems.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What is 50% of 40?<br>
-2. Solve: x + 4 = 9<br>
-3. Read a simple bar graph and answer questions
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Revise all topics<br>
-- Apply skills in problems<br>
-- Understand data and graphs
-</p>
+<h2>Maths – Revision</h2>
+<p>Review all topics</p>
+<a href="#">Download Maths Notes</a>
 </div>
 
-<!-- ENGLISH -->
 <div class="section">
-<h2>English – Term 4</h2>
-
-<h3>📘 Revision</h3>
-<p>Review grammar, comprehension, and writing skills.</p>
-
-<h3>📘 Essay Writing</h3>
-<p>Write longer pieces with clear structure (beginning, middle, end).</p>
-
-<h3>📘 Language Use</h3>
-<p>Correct punctuation, spelling, and sentence structure.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. Write a short essay about your holiday<br>
-2. Correct: "i went to school"<br>
-3. Identify verbs in a sentence
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Write clearly<br>
-- Use correct grammar<br>
-- Structure your ideas
-</p>
+<h2>English – Essays</h2>
+<p>Write clearly and correctly</p>
+<a href="#">Download English Notes</a>
 </div>
 
-<!-- NST -->
 <div class="section">
-<h2>NST – Term 4</h2>
-
-<h3>📘 Revision</h3>
-<p>Review energy, forces, systems, and environment.</p>
-
-<h3>📘 Matter and Materials</h3>
-<p>Understanding solids, liquids, and gases.</p>
-
-<h3>📘 Uses of Materials</h3>
-<p>Different materials are used for different purposes.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What are the 3 states of matter?<br>
-2. Give an example of a solid<br>
-3. Why do we use different materials?
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Matter has different states<br>
-- Materials have uses<br>
-- Revise all topics
-</p>
+<h2>NST – Matter</h2>
+<p>Solid, liquid, gas</p>
+<a href="#">Download NST Notes</a>
 </div>
 
-<!-- GEOGRAPHY -->
 <div class="section">
-<h2>Geography – Term 4</h2>
-
-<h3>📘 Population</h3>
-<p>People living in an area.</p>
-
-<h3>📘 Resources</h3>
-<p>Natural resources like water, minerals, and land.</p>
-
-<h3>📘 Use of Resources</h3>
-<p>How people use resources in daily life.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What is population?<br>
-2. Name one natural resource<br>
-3. Why are resources important?
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- People use resources<br>
-- Resources must be protected<br>
-- Understand population
-</p>
+<h2>Geography – Resources</h2>
+<p>Water, land, minerals</p>
+<a href="#">Download Geography Notes</a>
 </div>
 
-<!-- NAVIGATION -->
-<div class="nav-buttons">
-    <button onclick="goHome()">🏠 Home</button>
-    <button onclick="goBack()">⬅ Grade 5</button>
-    <button onclick="finish()">Finish 🎉</button>
+<div class="section">
+<h2>Final Test</h2>
+<input id="q1">
+<button onclick="check()">Submit</button>
+<p id="r"></p>
 </div>
+
+<button onclick="finish()">Finish</button>
 
 <script>
-function goHome() {
-    window.location.href = "index.html";
+function check(){
+document.getElementById("r").innerText="Final attempt done!";
 }
-
-function goBack() {
-    window.location.href = "index.html#school";
-}
-
-function finish() {
-    alert("🎉 You’ve completed Grade 5!");
+function finish(){
+alert("🎉 You completed Grade 5!");
 }
 </script>
 
