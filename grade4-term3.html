@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 4 Term 3</title>
 
+<style>
+body {font-family: Arial; padding:20px; background:#f4f6fb;}
+.section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
+h2 {color:#1e3c72;}
+button {padding:10px; background:#2a5298; color:white; border:none; border-radius:10px;}
+input {padding:8px; margin:5px; width:80%;}
+</style>
+</head>
+
+<body>
+
+<h1>Grade 4 – Term 3 Learning Hub</h1>
+
+<!-- ================= MATHS ================= -->
+<div class="section">
+<h2>📘 Maths – Fractions</h2>
+
+<p><b>Definition:</b> Fractions show parts of a whole.</p>
+<p><b>Example:</b> 1/2 means half.</p>
+
+<h3>🧪 Practice</h3>
+<p>1. What is 1/2 of 10?</p>
+<input id="pm1">
+
+<p>2. What is 1/4 of 8?</p>
+<input id="pm2">
+
+<button onclick="checkPractice()">Check Maths</button>
+<p id="practiceResult"></p>
+</div>
+
+<!-- ================= ENGLISH ================= -->
+<div class="section">
+<h2>📘 English – Comprehension</h2>
+
+<p><b>Read the passage carefully:</b></p>
+
+<p>
+Omar loved playing soccer after school. One day, he saw a younger child sitting alone on the field. 
+Instead of playing with his friends, Omar invited the child to join the game. 
+The child smiled and happily played along. 
+After the game, the child thanked Omar for including him. Omar felt proud of his kind action.
+</p>
+
+<h3>🧠 Questions</h3>
+
+<p>1. What did Omar enjoy doing?</p>
+<input id="e1">
+
+<p>2. Who did he see?</p>
+<input id="e2">
+
+<p>3. What did Omar do?</p>
+<input id="e3">
+
+<p>4. How did the child feel?</p>
+<input id="e4">
+
+<p>5. Why was Omar proud?</p>
+<input id="e5">
+
+<p>6. What quality did Omar show?</p>
+<input id="e6">
+
+<p>7. What lesson can we learn?</p>
+<input id="e7">
+
+<p>8. Would you do the same?</p>
+<input id="e8">
+
+<button onclick="checkEnglish()">Check Answers</button>
+<p id="engResult"></p>
+</div>
+
+<!-- ================= NST ================= -->
+<div class="section">
+<h2>📘 NST – Plants & Animals</h2>
+
+<p><b>Definition:</b> Plants and animals are living things.</p>
+
+<h3>🧪 Practice</h3>
+<p>Name one animal:</p>
+<input id="pn1">
+</div>
+
+<!-- ================= GEO ================= -->
+<div class="section">
+<h2>📘 Geography – Environment</h2>
+
+<p><b>Definition:</b> The environment is everything around us.</p>
+
+<h3>🧪 Practice</h3>
+<p>Give one example of the environment:</p>
+<input id="pg1">
+</div>
+
+<!-- ================= TEST ================= -->
+<div class="section">
+<h2>🎯 End of Term Test (25 Marks)</h2>
+
+<h3>Maths</h3>
+<p>1. 1/2 of 10</p><input id="q1">
+<p>2. 1/4 of 8</p><input id="q2">
+<p>3. 10 + 10</p><input id="q3">
+<p>4. 5 × 2</p><input id="q4">
+<p>5. 20 - 5</p><input id="q5">
+
+<h3>English</h3>
+<p>Omar invited a child to play.</p>
+<p>6. What did he do?</p><input id="q6">
+<p>7. Where was he?</p><input id="q7">
+<p>8. What type of person?</p><input id="q8">
+<p>9. How did child feel?</p><input id="q9">
+<p>10. Why proud?</p><input id="q10">
+
+<h3>NST</h3>
+<p>11. What is a plant?</p><input id="q11">
+<p>12. Name an animal</p><input id="q12">
+<p>13. Do plants grow?</p><input id="q13">
+<p>14. What do animals need?</p><input id="q14">
+<p>15. What is living?</p><input id="q15">
+
+<h3>Geography</h3>
+<p>16. What is environment?</p><input id="q16">
+<p>17. Name one example</p><input id="q17">
+<p>18. Why important?</p><input id="q18">
+<p>19. What is land?</p><input id="q19">
+<p>20. What is water?</p><input id="q20">
+
+<h3>Mixed</h3>
+<p>21. 1/2 of 6</p><input id="q21">
+<p>22. What is a sentence?</p><input id="q22">
+<p>23. What is energy?</p><input id="q23">
+<p>24. Why be kind?</p><input id="q24">
+<p>25. Good behaviour?</p><input id="q25">
+
+<br><br>
+<button onclick="markTest()">Submit Test</button>
+<p id="result"></p>
+</div>
+
+<!-- NAV -->
+<button onclick="location.href='index.html'">Home</button>
+<button onclick="location.href='index.html#school'">Back</button>
+<button onclick="location.href='grade4-term4.html'">Next</button>
+
+<script>
+
+function checkPractice(){
+let score=0;
+if(pm1.value=="5") score++;
+if(pm2.value=="2") score++;
+document.getElementById("practiceResult").innerText="Score: "+score+"/2";
+}
+
+function checkEnglish(){
+let score=0;
+for(let i=1;i<=8;i++){
+if(document.getElementById("e"+i).value!="") score++;
+}
+document.getElementById("engResult").innerText="Score: "+score+"/8";
+}
+
+function markTest(){
+let score=0;
+
+if(q1.value=="5") score++;
+if(q2.value=="2") score++;
+if(q3.value=="20") score++;
+if(q4.value=="10") score++;
+if(q5.value=="15") score++;
+
+for(let i=6;i<=25;i++){
+if(document.getElementById("q"+i).value!="") score++;
+}
+
+document.getElementById("result").innerText="🎉 Score: "+score+"/25";
+}
+
+</script>
+
+</body>
+</html>
