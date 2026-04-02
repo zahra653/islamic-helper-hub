@@ -4,28 +4,11 @@
 <title>Grade 6 Term 2</title>
 
 <style>
-body {
-    font-family: Arial;
-    background: #f4f6fb;
-    padding: 20px;
-}
-
-.section {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-}
-
-button {
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 10px;
-    border: none;
-    background: #2a5298;
-    color: white;
-    cursor: pointer;
-}
+body {font-family: Arial; background:#f4f6fb; padding:20px; line-height:1.6;}
+.section {background:white; padding:25px; margin:20px 0; border-radius:15px;}
+h2 {color:#1e3c72;}
+button {padding:10px; border:none; border-radius:10px; background:#2a5298; color:white;}
+input {padding:8px; margin:5px; width:80%;}
 </style>
 </head>
 
@@ -33,212 +16,99 @@ button {
 
 <h1>📘 Grade 6 – Term 2</h1>
 
-<!-- ================= NOTES ================= -->
-
 <div class="section">
-<h2>📊 Maths – Fractions & Decimals</h2>
+<h2>📊 Mathematics</h2>
+<p>Fractions and decimals represent parts of a whole. They can be converted between forms.</p>
+<p>Example: 1/2 = 0.5</p>
 
-<p>
-Fractions represent parts of a whole. You must be able to:
-• Simplify fractions  
-• Convert fractions to decimals  
-• Add and subtract fractions
-</p>
+<h3>🧠 Practice Questions</h3>
+1. 1/2 as decimal = <input id="m1"><br>
+2. 3/4 as decimal = <input id="m2"><br>
+3. 10 × 5 = <input id="m3"><br>
 
-<p>
-Example:
-1/2 = 0.5  
-3/4 = 0.75  
-</p>
+<button onclick="checkMath()">Check Maths</button>
+<p id="mathResult"></p>
 </div>
 
 <div class="section">
-<h2>📖 English – Reading & Writing</h2>
+<h2>📖 English</h2>
+<p>Paragraph writing includes a topic sentence, supporting details and conclusion.</p>
 
-<p>
-Learners now:
-• Read longer texts  
-• Identify main ideas  
-• Write structured paragraphs  
-</p>
+<h3>🧠 Questions</h3>
+1. What is a topic sentence?<br><input id="e1"><br>
+2. Why are paragraphs important?<br><input id="e2"><br>
 
-<p>
-Focus:
-• Topic sentence  
-• Supporting details  
-• Conclusion  
-</p>
+<button onclick="checkEnglish()">Check English</button>
+<p id="engResult"></p>
 </div>
 
 <div class="section">
-<h2>🔬 NST – Energy & Systems</h2>
+<h2>🔬 Natural Sciences</h2>
+<p>Energy exists in many forms such as heat, light and movement.</p>
 
-<p>
-Energy is needed for everything we do.
-Types:
-• Electrical  
-• Heat  
-• Movement  
-</p>
-
-<p>
-Systems are groups of parts working together.
-</p>
+<h3>🧠 Questions</h3>
+1. Name one type of energy:<br><input id="n1"><br>
+2. What is energy?<br><input id="n2"><br>
 </div>
 
 <div class="section">
-<h2>🌍 Geography – Climate & Weather</h2>
+<h2>🌍 Geography</h2>
+<p>Weather is daily conditions, while climate is long-term patterns.</p>
 
-<p>
-Weather = daily conditions  
-Climate = long-term patterns  
-</p>
-
-<p>
-Example:
-Durban → warm & humid climate
-</p>
+<h3>🧠 Questions</h3>
+1. What is weather?<br><input id="g1"><br>
+2. What is climate?<br><input id="g2"><br>
 </div>
 
-<!-- ================= COMPREHENSION ================= -->
-
 <div class="section">
-<h2>📖 Comprehension</h2>
+<h2>📝 Final Assessment (25 Marks)</h2>
 
-<p>
-Fatimah was learning about fractions in class. At first, she found it difficult to understand how they worked. 
-Her teacher explained using real-life examples like cutting a cake into equal parts. 
-Soon, Fatimah began to understand and even helped her classmates. 
-She realised that practice and patience can make learning easier.
-</p>
+1. 1/2 as decimal <input id="q1"><br>
+2. 3/4 as decimal <input id="q2"><br>
 
-<p><b>Questions:</b></p>
+3–25:<br>
+<input id="q3"><br><input id="q4"><br><input id="q5"><br>
+<input id="q6"><br><input id="q7"><br><input id="q8"><br>
+<input id="q9"><br><input id="q10"><br><input id="q11"><br>
+<input id="q12"><br><input id="q13"><br><input id="q14"><br>
+<input id="q15"><br><input id="q16"><br><input id="q17"><br>
+<input id="q18"><br><input id="q19"><br><input id="q20"><br>
+<input id="q21"><br><input id="q22"><br><input id="q23"><br>
+<input id="q24"><br><input id="q25"><br>
 
-1. What was Fatimah learning?<br>
-<input id="q1"><br><br>
-
-2. Why did she struggle?<br>
-<input id="q2"><br><br>
-
-3. What helped her understand?<br>
-<input id="q3"><br><br>
-
-4. What lesson did she learn?<br>
-<input id="q4"><br><br>
-
-</div>
-
-<!-- ================= TEST ================= -->
-
-<div class="section">
-<h2>📝 Test (25 Questions)</h2>
-
-<p>5. 1/2 as decimal</p>
-<input id="q5"><br>
-
-<p>6. 3/4 as decimal</p>
-<input id="q6"><br>
-
-<p>7. 10 × 5</p>
-<input id="q7"><br>
-
-<p>8. 20 ÷ 4</p>
-<input id="q8"><br>
-
-<p>9. Name one type of energy</p>
-<input id="q9"><br>
-
-<p>10. What is weather?</p>
-<input id="q10"><br>
-
-<!-- EXTENDED -->
-<p>11–25: Answer fully</p>
-
-<input id="q11"><br>
-<input id="q12"><br>
-<input id="q13"><br>
-<input id="q14"><br>
-<input id="q15"><br>
-<input id="q16"><br>
-<input id="q17"><br>
-<input id="q18"><br>
-<input id="q19"><br>
-<input id="q20"><br>
-<input id="q21"><br>
-<input id="q22"><br>
-<input id="q23"><br>
-<input id="q24"><br>
-<input id="q25"><br>
-
-<br>
-<button onclick="markTest()">Submit Test</button>
-
+<button onclick="markTest()">Submit</button>
 <p id="result"></p>
 </div>
 
-<!-- ================= NAV ================= -->
-
-<div class="section">
-<button onclick="goHome()">🏠 Home</button>
-<button onclick="goBack()">⬅ Term 1</button>
-<button onclick="goNext()">Next ➡</button>
-</div>
+<button onclick="location.href='index.html'">🏠 Home</button>
+<button onclick="location.href='grade6-term3.html'">Next ➡</button>
 
 <script>
-
-function goHome(){
-window.location.href = "index.html";
+function checkMath(){
+let s=0;
+if(m1.value=="0.5") s++;
+if(m2.value=="0.75") s++;
+if(m3.value=="50") s++;
+mathResult.innerText="Score: "+s+"/3";
 }
-
-function goBack(){
-window.location.href = "grade6-term1.html";
+function checkEnglish(){
+let s=0;
+if(e1.value!="") s++;
+if(e2.value!="") s++;
+engResult.innerText="Score: "+s+"/2";
 }
-
-function goNext(){
-window.location.href = "grade6-term3.html";
-}
-
 function markTest(){
-
-let score = 0;
-
-// Maths
-if(q5.value=="0.5") score++;
-if(q6.value=="0.75") score++;
-if(q7.value=="50") score++;
-if(q8.value=="5") score++;
-
-// Comprehension (basic check)
-if(q1.value!="") score++;
-if(q2.value!="") score++;
-if(q3.value!="") score++;
-if(q4.value!="") score++;
-
-// General
-for(let i=9;i<=25;i++){
-if(document.getElementById("q"+i).value!=""){
-score++;
+let s=0;
+if(q1.value=="0.5") s++;
+if(q2.value=="0.75") s++;
+for(let i=3;i<=25;i++){
+if(document.getElementById("q"+i).value!="") s++;
 }
+result.innerText="Final Score: "+s+"/25";
+let ex=localStorage.getItem("scores");
+let ns="Grade 6 Term 2: "+s+"/25";
+localStorage.setItem("scores", ex?ex+"\n"+ns:ns);
 }
-
-// Show result
-document.getElementById("result").innerText =
-"🎉 Score: " + score + "/25";
-
-// SAVE SCORE
-let existing = localStorage.getItem("scores");
-let newScore = "Grade 6 Term 2: " + score + "/25";
-
-if(existing){
-existing = existing + "\n" + newScore;
-} else {
-existing = newScore;
-}
-
-localStorage.setItem("scores", existing);
-
-}
-
 </script>
 
 </body>
