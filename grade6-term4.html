@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade 6 Term 4</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6fb;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📘 Grade 6 – Term 4</h1>
+
+<!-- ================= NOTES ================= -->
+
+<div class="section">
+<h2>📊 Maths – Revision</h2>
+
+<p>
+Topics:
+• Whole numbers  
+• Fractions & decimals  
+• Percentages  
+• Ratios  
+• BODMAS  
+</p>
+
+<p>
+Example:
+10 + 5 × 2 = 20 (BODMAS rule)
+</p>
+</div>
+
+<div class="section">
+<h2>📖 English – Reading & Writing</h2>
+
+<p>
+Focus:
+• Comprehension skills  
+• Paragraph writing  
+• Vocabulary  
+• Grammar  
+</p>
+
+<p>
+You must:
+• Understand meaning  
+• Explain answers  
+• Write clearly  
+</p>
+</div>
+
+<div class="section">
+<h2>🔬 NST – Revision</h2>
+
+<p>
+Topics:
+• Matter & materials  
+• Energy  
+• Systems  
+• Body systems  
+</p>
+</div>
+
+<div class="section">
+<h2>🌍 Geography – Revision</h2>
+
+<p>
+Topics:
+• Map skills  
+• Climate  
+• Resources  
+• Trade  
+</p>
+</div>
+
+<!-- ================= COMPREHENSION ================= -->
+
+<div class="section">
+<h2>📖 Comprehension</h2>
+
+<p>
+A group of learners were preparing for their final exams. They revised their notes, practised questions, 
+and helped each other understand difficult topics. Their teacher reminded them that success comes from effort, 
+practice, and a positive attitude. By the end of the term, they felt confident and ready.
+</p>
+
+<p><b>Questions:</b></p>
+
+1. What were the learners preparing for?<br>
+<input id="q1"><br><br>
+
+2. What did they do to prepare?<br>
+<input id="q2"><br><br>
+
+3. What advice did the teacher give?<br>
+<input id="q3"><br><br>
+
+4. How did they feel at the end?<br>
+<input id="q4"><br><br>
+
+</div>
+
+<!-- ================= TEST ================= -->
+
+<div class="section">
+<h2>📝 Final Test (25 Questions)</h2>
+
+<p>5. 50% of 40</p>
+<input id="q5"><br>
+
+<p>6. 1/2 as decimal</p>
+<input id="q6"><br>
+
+<p>7. 3/4 as decimal</p>
+<input id="q7"><br>
+
+<p>8. 20 ÷ 5</p>
+<input id="q8"><br>
+
+<p>9. 10 + 5 × 2</p>
+<input id="q9"><br>
+
+<p>10. Name one body system</p>
+<input id="q10"><br>
+
+<!-- EXTENDED -->
+<p>11–25: Answer fully</p>
+
+<input id="q11"><br>
+<input id="q12"><br>
+<input id="q13"><br>
+<input id="q14"><br>
+<input id="q15"><br>
+<input id="q16"><br>
+<input id="q17"><br>
+<input id="q18"><br>
+<input id="q19"><br>
+<input id="q20"><br>
+<input id="q21"><br>
+<input id="q22"><br>
+<input id="q23"><br>
+<input id="q24"><br>
+<input id="q25"><br>
+
+<br>
+<button onclick="markTest()">Submit Test</button>
+
+<p id="result"></p>
+</div>
+
+<!-- ================= NAV ================= -->
+
+<div class="section">
+<button onclick="goHome()">🏠 Home</button>
+<button onclick="goBack()">⬅ Term 3</button>
+<button onclick="finish()">Finish 🎉</button>
+</div>
+
+<script>
+
+function goHome(){
+window.location.href = "index.html";
+}
+
+function goBack(){
+window.location.href = "grade6-term3.html";
+}
+
+function finish(){
+alert("🎉 You have completed Grade 6!");
+}
+
+function markTest(){
+
+let score = 0;
+
+// Maths
+if(q5.value=="20") score++;
+if(q6.value=="0.5") score++;
+if(q7.value=="0.75") score++;
+if(q8.value=="4") score++;
+if(q9.value=="20") score++;
+
+// Comprehension
+if(q1.value!="") score++;
+if(q2.value!="") score++;
+if(q3.value!="") score++;
+if(q4.value!="") score++;
+
+// General
+for(let i=10;i<=25;i++){
+if(document.getElementById("q"+i).value!=""){
+score++;
+}
+}
+
+// Show result
+document.getElementById("result").innerText =
+"🎉 Final Score: " + score + "/25";
+
+// SAVE SCORE
+let existing = localStorage.getItem("scores");
+let newScore = "Grade 6 Term 4: " + score + "/25";
+
+if(existing){
+existing = existing + "\n" + newScore;
+} else {
+existing = newScore;
+}
+
+localStorage.setItem("scores", existing);
+
+}
+
+</script>
+
+</body>
+</html>
