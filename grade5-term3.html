@@ -1,184 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grade 5 Term 3</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f4f6fb;
-        }
-
-        h1 {
-            color: #1e3c72;
-        }
-
-        .section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
-        }
-
-        .nav-buttons {
-            margin-top: 30px;
-        }
-
-        button {
-            padding: 10px 15px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 10px;
-            background: #2a5298;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-    </style>
+<title>Grade 5 Term 3</title>
+<style>
+body {font-family: Arial; padding:20px; background:#f4f6fb;}
+.section {background:white; padding:20px; margin:20px 0; border-radius:15px;}
+button {padding:10px; background:#2a5298; color:white; border:none;}
+</style>
 </head>
-
 <body>
 
-<h1>Grade 5 – Term 3 Notes</h1>
+<h1>Grade 5 – Term 3</h1>
 
-<!-- MATHS -->
 <div class="section">
-<h2>Maths – Term 3</h2>
-
-<h3>📘 Percentages</h3>
-<p>Percentages show parts out of 100. Example: 50% = 50/100 = 1/2</p>
-
-<h3>📘 Converting Fractions</h3>
-<p>Fractions can be changed into percentages. Example: 1/2 = 50%</p>
-
-<h3>📘 Basic Algebra</h3>
-<p>Using letters to represent numbers. Example: x + 3 = 7</p>
-
-<h3>📘 Word Problems</h3>
-<p>If 50% of 20 learners are girls → 10 are girls</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What is 25% of 100?<br>
-2. Convert 1/4 into a percentage<br>
-3. Solve: x + 5 = 10
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Percent means out of 100<br>
-- Fractions can convert to percentages<br>
-- Algebra uses letters for numbers
-</p>
+<h2>Maths – Percentages</h2>
+<p>Percent means out of 100</p>
+<p>50% = 1/2</p>
+<a href="#">Download Maths Notes</a>
 </div>
 
-<!-- ENGLISH -->
 <div class="section">
-<h2>English – Term 3</h2>
-
-<h3>📘 Writing Skills</h3>
-<p>Writing paragraphs and short essays clearly.</p>
-
-<h3>📘 Tenses</h3>
-<p>Past, present, and future tense.</p>
-
-<h3>📘 Reading</h3>
-<p>Understanding stories and answering questions.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. Write a sentence in past tense<br>
-2. What is present tense?<br>
-3. Write 3 sentences about your school
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Use correct tense<br>
-- Write clearly<br>
-- Understand what you read
-</p>
+<h2>English – Writing</h2>
+<p>Write full sentences</p>
+<a href="#">Download English Notes</a>
 </div>
 
-<!-- NST -->
 <div class="section">
-<h2>NST – Term 3</h2>
-
-<h3>📘 Systems</h3>
-<p>Systems are groups of parts that work together.</p>
-
-<h3>📘 Environment</h3>
-<p>Everything around us including plants, animals, and people.</p>
-
-<h3>📘 Human Impact</h3>
-<p>How people affect the environment (pollution, recycling).</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What is a system?<br>
-2. Give one example of pollution<br>
-3. How can we protect the environment?
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Systems work together<br>
-- Humans affect the environment<br>
-- Protect nature
-</p>
+<h2>NST – Environment</h2>
+<p>Protect nature</p>
+<a href="#">Download NST Notes</a>
 </div>
 
-<!-- GEOGRAPHY -->
 <div class="section">
-<h2>Geography – Term 3</h2>
-
-<h3>📘 Climate</h3>
-<p>Climate is the long-term weather of a place.</p>
-
-<h3>📘 Weather</h3>
-<p>Daily conditions like rain, sun, wind.</p>
-
-<h3>📘 Natural Resources</h3>
-<p>Things from nature like water, soil, and minerals.</p>
-
-<h3>🧪 Practice</h3>
-<p>
-1. What is climate?<br>
-2. Name one natural resource<br>
-3. What is weather?
-</p>
-
-<h3>🧠 Summary</h3>
-<p>
-- Climate is long-term<br>
-- Weather changes daily<br>
-- Resources come from nature
-</p>
+<h2>Geography – Climate</h2>
+<p>Weather over time</p>
+<a href="#">Download Geography Notes</a>
 </div>
 
-<!-- NAVIGATION -->
-<div class="nav-buttons">
-    <button onclick="goHome()">🏠 Home</button>
-    <button onclick="goBack()">⬅ Grade 5</button>
-    <button onclick="goNext()">Next ➡</button>
+<div class="section">
+<h2>Test</h2>
+<input id="q1">
+<button onclick="check()">Check</button>
+<p id="r"></p>
 </div>
+
+<button onclick="location.href='grade5-term4.html'">Next</button>
 
 <script>
-function goHome() {
-    window.location.href = "index.html";
-}
-
-function goBack() {
-    window.location.href = "index.html#school";
-}
-
-function goNext() {
-    window.location.href = "grade5-term4.html";
+function check(){
+document.getElementById("r").innerText="Keep going!";
 }
 </script>
 
